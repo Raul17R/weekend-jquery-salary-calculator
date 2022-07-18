@@ -20,8 +20,6 @@ function pushInfo() {
         totalMonthlyCost,
         };
 
-
-
     employees.push(addedEmployees);
     let totalEmployeeSalary = 0;
     for (let index = 0; index < employees.length; index++) {
@@ -49,6 +47,5 @@ function pushInfo() {
     <td>${annualSalary}</td>
     </tr>
     `)
-
     $('input').val('');
 }
