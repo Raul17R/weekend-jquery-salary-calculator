@@ -3,6 +3,12 @@ $(readyNow);
 function readyNow() {
     console.log('Ready now!');
     $('#submit').on('click',pushInfo);
+    $('body').on('click', '.delete-button', deleteEmployee);
+    // $('body').on('click', '.delete-button',function () {
+    //     $(this)
+    // });
+    // $('#add-car').on('click', function() { $('.search-input').val("") })
+    
 }
 let employees = [];
 
@@ -45,7 +51,15 @@ function pushInfo() {
     <td>${idNumber}</td>
     <td>${jobTitle}</td>
     <td>${annualSalary}</td>
+    <td><button class="delete-button">Delete</button></td>
     </tr>
     `)
+   
     $('input').val('');
+}
+function deleteEmployee() {
+    console.log('in delete');
+    let myParent = $(this).parent().parent();
+    console.log($(this).data());  
+     myParent.remove();
 }

@@ -27,5 +27,8 @@ h2{
 
   .redbackground{
     background-color: red;
-    
+
+  }
+  .delete-button {
+    float: right;
   }
